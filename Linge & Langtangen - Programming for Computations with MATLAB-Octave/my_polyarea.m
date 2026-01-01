@@ -1,20 +1,19 @@
 function res = my_polyarea(xs, ys)
-%MY_POLYAREA Computes the area of a 2D polygon given its vertices.
-%   RES = MY_POLYAREA(XS, YS) calculates the area of a planar polygon
-%   defined by the vertices with coordinates XS and YS.
+% Computes the area of a 2D polygon given its vertices.
+%  implementing the Gauss Area Formula (Shoelace Formula).
 %
-%   The function implements the Gauss Area Formula (Shoelace Formula).
-%   The input vectors must satisfy the following conditions:
+% The input vectors must satisfy the following conditions:
 %       1. They must have the same length.
 %       2. The vertices must be ordered consecutively (clockwise or 
 %          counter-clockwise).
 %
 %   Inputs:
-%       XS - Vector of x-coordinates (double).
-%       YS - Vector of y-coordinates (double).
+%       xs - Vector of x-coordinates (double).
+%       ys - Vector of y-coordinates (double).
 %
 %   Output:
-%       RES - The calculated area (positive scalar).
+%       res - The calculated area (positive scalar).
+%
   if nargin < 2
     error("Two input arguments are required: xs and ys.");
   endif

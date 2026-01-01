@@ -1,10 +1,10 @@
 function res = my_polyarea(xs, ys)
-% Computes the area of a 2D polygon given its vertices.
-%  implementing the Gauss Area Formula (Shoelace Formula).
+% Computes the area of a 2D polygon given its vertices implementing the 
+%  Gauss Area Formula (Shoelace Formula).
 %
 % The input vectors must satisfy the following conditions:
 %       1. They must have the same length.
-%       2. The vertices must be ordered consecutively (clockwise or 
+%       2. The vertices must be ordered consecutively (clockwise or
 %          counter-clockwise).
 %
 %   Inputs:

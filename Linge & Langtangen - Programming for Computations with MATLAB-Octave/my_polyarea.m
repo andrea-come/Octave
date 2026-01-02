@@ -1,5 +1,5 @@
 function res = my_polyarea(xs, ys)
-% Computes the area of a 2D polygon given its vertices implementing the 
+% Computes the area of a 2D polygon given its vertices implementing the
 %  Gauss Area Formula (Shoelace Formula).
 %
 % The input vectors must satisfy the following conditions:
@@ -8,11 +8,11 @@ function res = my_polyarea(xs, ys)
 %          counter-clockwise).
 %
 %   Inputs:
-%       xs - Vector of x-coordinates (double).
-%       ys - Vector of y-coordinates (double).
+%       XS - Vector of x-coordinates (double).
+%       YS - Vector of y-coordinates (double).
 %
 %   Output:
-%       res - The calculated area (positive scalar).
+%       RES - The calculated area (positive scalar).
 %
   if nargin < 2
     error("Two input arguments are required: xs and ys.");
@@ -25,3 +25,4 @@ function res = my_polyarea(xs, ys)
   n = x_len;
   res = 0.5 * abs( sum(xs .* circshift(ys, -1) - ys .* circshift(xs, -1)));
 endfunction
+

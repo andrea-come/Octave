@@ -13,6 +13,7 @@ function [b, iter] = area_rectangle_vs_circle
   a = 1.3;
   b_min = 0; b_max = 1;
 
+  % Exponential Search
   iter = 0;
   while a * b_max < area
     b_min = b_max;

@@ -11,21 +11,24 @@ function [b, iter] = area_rectangle_vs_circle
   area = pi * r^2;
 
   a = 1.3;
-  b_min = r; b_max = 2 * area / a;
-  b = (b_min + b_max) / 2;
-  current_area = a * b;
+  b_min = 0; b_max = 1;
 
-  iter = 1;
+  iter = 0;
+  while a * b_max < area
+    b_min = b_max;
+    b_max = b_max * 2;
+    iter = iter + 1;
+  endwhile
+  b = (b_min + b_max) / 2;
 
   while (b_max - b_min) > 0.5
-    if current_area > area
+    iter = iter + 1;
+    if a * b > area
       b_max = b;
     else
       b_min = b;
     endif
     b = (b_min + b_max) / 2;
-    current_area = a * b;
-    iter++;
-  endwhile
+    endwhile
   b = round(b);
 endfunction

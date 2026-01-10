@@ -17,7 +17,7 @@ nums_sorted = sort(nums);
 nums_len = length(nums);
 
 printf("Before sorting:\n")
-display(nums)
+disp(nums)
 
 % Insertion Sort
 for k = 2:(nums_len)
@@ -31,6 +31,6 @@ for k = 2:(nums_len)
 endfor
 
 printf("After sorting:\n")
-display(nums)
+disp(nums)
 printf("Using built-in function sort():\n")
-display(nums_sorted)
+disp(nums_sorted)

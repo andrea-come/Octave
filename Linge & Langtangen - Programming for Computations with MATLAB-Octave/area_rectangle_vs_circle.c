@@ -1,3 +1,4 @@
+% Exercise 2.8: Area of rectangle versus circle
 % Consider one circle and one rectangle. The circle has a radius r = 10.6.
 % The rectangle has sides a and b, but only a is known from the outset.
 % Let a = 1.3 and write a program that uses a while loop to find the largest
